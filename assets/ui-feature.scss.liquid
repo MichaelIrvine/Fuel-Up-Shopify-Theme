@@ -1,0 +1,46 @@
+/*============================================================================
+    Added SCSS for Fuel Up Shopify Theme
+==============================================================================*/
+
+
+.image-credit__wrapper {
+    display: flex;
+    position: absolute; 
+    bottom: 4rem; 
+    right: 1rem; 
+    z-index: 901;
+
+    .image-credit__link {
+        margin: 0 1em;
+        width: 1px;
+        display: none;
+        
+        .image-credit__name {
+            padding: 0.2em 1em;
+            background-color: rgba(255,255,255, 0.8);
+            color: #000000;
+        }
+    }
+
+    .image-credit__icon {
+        cursor: pointer;
+        transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+
+        svg#shutter-icon {
+            height: 28px;
+
+            path {
+                fill: rgba(255,255,255,0.8);
+            }
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+            opacity: 0.5;
+        }
+    }
+
+    
+
+
+}
