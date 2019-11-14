@@ -2,31 +2,45 @@
     Added SCSS for Fuel Up Shopify Theme
 ==============================================================================*/
 
-
+// -- Photographer Credit
 .image-credit__wrapper {
     display: flex;
+    flex-direction: row-reverse;
+    height: 30px;
     position: absolute; 
-    bottom: 4rem; 
+    bottom: 3rem; 
     right: 1rem; 
     z-index: 901;
 
     .image-credit__link {
-        margin: 0 1em;
-        width: 1px;
-        display: none;
-        
+        transform: scale(0);
+        transition: scale 50ms ease-in-out, opacity 300ms ease-in-out;
+        opacity: 0;
+
         .image-credit__name {
+            font-size: 0.7em;
             padding: 0.2em 1em;
+            margin: 0;
             background-color: rgba(255,255,255, 0.8);
             color: #000000;
+        }
+
+        &:hover {
+            opacity: 1;
+            transform: scale(1);
         }
     }
 
     .image-credit__icon {
         cursor: pointer;
         transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+        padding-left: 1em;
 
         svg#shutter-icon {
+            @media screen and ( max-width: 1280px ){
+                height: 20px;
+            }
+
             height: 28px;
 
             path {
@@ -35,12 +49,13 @@
         }
 
         &:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             opacity: 0.5;
         }
     }
+}
 
-    
-
-
+.image-credit__icon:hover ~ .image-credit__link {
+    opacity: 1;
+    transform: scale(1);
 }

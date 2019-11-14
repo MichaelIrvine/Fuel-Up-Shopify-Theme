@@ -112,10 +112,9 @@
       {% endunless %}
     </main>
 
-    <hr class="hr--large">
-
     {% section 'footer' %}
-
+<!-- Switch this on when Payment Type Icons are in place. Copyright may look better at bottom of footer -->
+<p class="footer__copyright">&copy; {{ 'now' | date: '%Y' }} | {{ shop.name | link_to: routes.root_url }}</p>
   </div>
 
   {% comment %}
